@@ -1,8 +1,6 @@
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import {
-    navItems,
-} from '@/data/menu'
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { navItems } from '@/data/menu';
 
 export function MainMenu() {
     const pathname = usePathname();
@@ -24,7 +22,6 @@ export function MainMenu() {
             >
                 <span />
             </button>
-            {/* End mobile collapse menu */}
 
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
@@ -35,30 +32,33 @@ export function MainMenu() {
                             </Link>
                         </div>
                     </li>
-                    {/* End li */}
 
                     {navItems.map((menu, index) => (
-                        <li key={index} className="nav-item ">
-                            <a
+                        <li key={index} className={`nav-item ${menu.submenu ? 'dropdown' : ''}`}>
+                            <Link
                                 href={menu.link}
-                                role="button"
-                                data-bs-auto-close="outside"
-                                aria-expanded="false"
-                                className={
-                                    isActive(menu.link)
-                                        ? "nav-link active-menu"
-                                        : "nav-link"
-                                }
+                                className={`nav-link ${menu.submenu ? 'dropdown-toggle' : ''} ${isActive(menu.link) ? 'active-menu' : ''}`}
+                                role={menu.submenu ? 'button' : undefined}
+                                data-bs-toggle={menu.submenu ? 'dropdown' : undefined}
+                                aria-expanded={menu.submenu ? 'false' : undefined}
                             >
                                 {menu.title}
-                            </a>
+                            </Link>
+                            {menu.submenu && (
+                                <ul className="dropdown-menu">
+                                    {menu.submenu.map((subItem, subIndex) => (
+                                        <li key={subIndex}>
+                                            <Link href={subItem.link} className="dropdown-item">
+                                                {subItem.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
-
                 </ul>
-                {/* End ul */}
 
-                {/* Mobile Content */}
                 <div className="mobile-content d-block d-lg-none">
                     <div className="d-flex flex-column align-items-center justify-content-center mt-70">
                         <Link
@@ -69,8 +69,7 @@ export function MainMenu() {
                         </Link>
                     </div>
                 </div>
-                {/* /.mobile-content */}
             </div>
-        </nav >
+        </nav>
     );
 }
