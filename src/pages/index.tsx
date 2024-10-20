@@ -5,6 +5,7 @@ import { FeatureBlock, Hero, IntroAbout, MobileAppBanner, Service, Testimonial, 
 import { Block, Partners } from "@/components/services"
 import { NextPageWithLayout } from "@/types/index";
 import { Customers } from "@/components/home-page/Customers";
+import { NextSeo } from "next-seo";
 
 const seoTitle = "Cogninova Solutions | Building Smart and Intuitive Solutions";
 
@@ -14,7 +15,7 @@ const Home: NextPageWithLayout = () => {
         <meta name="keywords" content="Cogninova, Solutions, Cogninova Solutions, Development, Mobile, Software, IT, Technology"></meta>
         <meta name="description" content="Home Page" />
 
-            <Hero />
+        <Hero />
 
             <div className="fancy-feature-thirtySix mt-190 lg-mt-140">
                 <div className="container">
