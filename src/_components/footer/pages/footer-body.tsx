@@ -4,7 +4,9 @@ const columns = [
         links: [
             { label: "Home", url: "/" },
             { label: "About", url: "/about-us" },
+            { label: "Our Products", url: "/medlink"},
             { label: "Our Services", url: "/services" },
+            { label: "Careers", url: "https://cogninovasolutions.zohorecruit.com/jobs/Careers"},
             { label: "Contact Us", url: "/contact-us" }
         ],
     },
@@ -22,7 +24,7 @@ export function FooterBody() {
     return (
         <>
             {columns.map((column, index) => (
-                <div className="col-xl-2 col-lg-3 col-sm-5 mb-30" key={index}>
+                <div className="col-lg-3 col-sm-5 mb-30" key={index}>
                     <h5 className="footer-title tx-dark fw-normal">{column.title}</h5>
                     <ul className="footer-nav-link style-none">
                         {column.links.map((link, index) => (

@@ -6,7 +6,9 @@ const links = [
         items: [
             { label: "Home", href: "/" },
             { label: "About", href: "/about-us" },
+            { label: "Our Products", href: "/medlink" },
             { label: "Our Services", href: "/services" },
+            { label: "Careers", href: "https://cogninovasolutions.zohorecruit.com/jobs/Careers" },
             { label: "Contact us", href: "/contact-us" }
         ],
     },

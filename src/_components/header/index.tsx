@@ -29,7 +29,7 @@ export function Header() {
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="logo order-lg-0">
                         <Link href="/" className="d-block">
-                            <img src="/images/logo/Cogninova_logo.png" width= '200px' height= '46px' alt="Cogninova Solutions Logo" />
+                            <img src="/images/logo/Cogninova_logo.png" width= '250px' height= '70.69px' alt="Cogninova Solutions Logo" />
                         </Link>
                     </div>{" "}
                     {/* /.right-widget */}

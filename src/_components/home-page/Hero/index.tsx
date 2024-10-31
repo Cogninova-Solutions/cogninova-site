@@ -11,7 +11,7 @@ export function Hero() {
                         data-aos="fade-up"
                     >
                         <h1 className="hero-heading fw-500 tx-dark">
-                            Elevating Businesses through <span>Smart &amp; Intuitive</span> Solutions.
+                            Building Tomorrow <span>One Solution</span> at a Time!
                         </h1>
                         <p className="text-lg tx-dark mt-45 mb-50 lg-mt-30 lg-mb-40">
                             We drive success through digital transformation.
